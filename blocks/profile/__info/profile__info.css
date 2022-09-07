@@ -1,0 +1,13 @@
+.profile__info {
+	font-family: 'Inter', sans-serif;
+	padding-left: 30px;
+	color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+ 
+    .profile__info {
+		padding-left: 0px;
+	}
+ 
+}

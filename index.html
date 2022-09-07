@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<title>Mesto</title>
+  	<link type="text/css" rel="stylesheet" href="./pages/index.css">
+  	
+</head>
+<body class="body">
+	<div class="page">
+		<header class="header">
+			<img class="logo" src="images/logo.svg" alt="Логотип">
+		</header>
+		<main class="main">
+			<section class="profile">
+				<img class="profile__image" src="images/image.jpg" alt="Лицо на фоне моря Жак-Ива Кусто">
+				<div class="profile__info">
+					<h1 class="profile__name">Жак-Ив Кусто</h1>
+					<button class="profile__edit" type="button"></button>
+					<p class="profile__job">Исследователь океана</p>
+				</div>
+				<button class="profile__add" type="button"><img src="images/Vector1.svg" alt="Белый крестик"></button>
+			</section>
+			<section class="cards">
+				<template id="card-template">
+					<div class="card"> 
+						<img class="card__image" src=" " alt=" ">
+						<div class="card__info"> 
+							<h2 class="card__name"></h2> 
+							<button type="button" class="card__like"></button>  
+						</div> 
+						<button type="button" class="card__delete"></button>
+					</div> 
+				</template>
+			</section>
+		</main>
+		<footer class="footer">
+			<p class="footer__copyright">© 2020 Mesto Russia</p>
+		</footer>
+	</div>
+	<div class="popup popup_edit_profile">
+		<div class="popup__container">
+			<button type="button" class="popup__close"></button>
+			<h2 class="popup__title">Редактировать профиль</h2>
+			<form class="popup__form popup__form_edit_profile" name="form">
+                <input type="text" class="popup__input popup__input_name_input" id="name-input" name="name" placeholder="Имя" minlength="2" maxlength="40" required>
+                <span class="popup__input-error name-input-error"></span>
+                <input type="text" class="popup__input popup__input_job_input" id="job-input" name="job" placeholder="Род занятий" required minlength="2" maxlength="200">
+                <span class="popup__input-error job-input-error"></span>
+                <button class="popup__save" type="submit">Сохранить</button>
+			</form>
+		</div>
+	</div>
+	<div class="popup popup_add_cards">
+		<div class="popup__container">
+			<button type="button" class="popup__close"></button>
+			<h2 class="popup__title">Новое место</h2>
+			<form class="popup__form popup__form_add_cards" name="form">
+                <input type="text" class="popup__input popup__input_title_input" id="title-input" name="title" minlength="2" maxlength="30" required placeholder="Название">
+                <span class="popup__input-error title-input-error"></span>
+                <input class="popup__input popup__input_link_input" id="url-input" type="url" name="job" required placeholder="Ссылка на картинку">
+                <span class="popup__input-error url-input-error"></span>
+                <button class="popup__save popup__save_card" type="submit">Создать</button>
+			</form>
+		</div>
+	</div>
+	<div class="popup popup_open_img">
+		<div class="popup__container popup__container_img">
+			<button type="button" class="popup__close"></button>
+			<img class="popup__img" src=" " alt=" ">
+			<h3 class="popup__name"></h3>
+		</div>
+	</div>
+	<script src="js/validate.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>
